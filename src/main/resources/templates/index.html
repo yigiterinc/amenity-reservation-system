@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Amenities Reservation App</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+
+<div>
+    <div th:insert="fragments/nav :: nav"></div>
+    <div class="text-light" style="background-image: url('https://source.unsplash.com/1920x1080/?nature');
+                                   position: absolute;
+                                   left: 0;
+                                   top: 0;
+                                   opacity: 0.6;
+                                   z-index: -1;
+                                   min-height: 100vh;
+                                   min-width: 100vw;">
+    </div>
+
+    <div class="container" style="padding-top: 20vh; display: flex; flex-direction: column; align-items: center;">
+        <h1 class="display-3">Reservation management made easy.</h1>
+        <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Numquam in quia natus magnam ducimus quas molestias velit vero maiores.
+            Eaque sunt laudantium voluptas. Fugiat molestiae ipsa delectus iusto vel quod.</p>
+        <a href="/login" class="btn btn-success btn-lg my-2">Login to Reserve an Amenity</a>
+    </div>
+</div>
+
+<script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: ${JDBC_DATABASE_URL:jdbc:h2:mem:amenity-reservation-system}
+    username: ${JDBC_DATABASE_USERNAME:sa}
+    password: ${JDBC_DATABASE_PASSWORD:}
+  dbcp2:
+    max-wait-millis: 30000
+    validation-query: "SELECT 1"
+    validation-query-timeout: 30
+  thymeleaf:
+    cache: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        id:
+          new_generator_mappings: true
+springdoc:
+  pathsToMatch: /api/**
