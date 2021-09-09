@@ -35,6 +35,9 @@ public class User {
     @Column(nullable = false, unique = true)
     private String fullName;
 
+    @Column(nullable = false, unique = true)
+    private String username;
+
     @Column
     private String passwordHash;
 
@@ -58,8 +61,9 @@ public class User {
         lastUpdated = OffsetDateTime.now();
     }
 
-    public User(String fullName, String passwordHash) {
+    public User(String fullName, String username, String passwordHash) {
         this.fullName = fullName;
+        this.username = username;
         this.passwordHash = passwordHash;
     }
 }
