@@ -26,7 +26,6 @@ public class AmenityReservationSystemApplication {
         SpringApplication.run(AmenityReservationSystemApplication.class, args);
     }
 
-
     @Bean
     public CommandLineRunner loadData(UserRepository userRepository,
                                       ReservationRepository reservationRepository) {
